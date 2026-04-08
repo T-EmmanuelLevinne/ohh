@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>book</title>
+
+  <!-- Pencil/handwriting font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="stage">
+    <section class="book-wrap">
+      <div class="book" id="book" aria-label="Interactive book">
+        <!-- Decorative flip sheets for turn animation -->
+        <div class="flip-stack" aria-hidden="true">
+          <div class="flip-page"></div>
+          <div class="flip-page"></div>
+          <div class="flip-page"></div>
+          <div class="flip-page"></div>
+          <div class="flip-page"></div>
+          <div class="flip-page"></div>
+        </div>
+
+        <!-- Pages container -->
+        <div class="pages" id="pages">
+          <!-- Page 1 -->
+          <article class="page page-1" data-page="1">
+            <div class="paper">
+              <div class="paper-inner" id="page1Content">
+                <h2 class="pencil-title">hi raine!!</h2>
+                <p class="pencil-sub"> I hope you love the ice cream and the bracelet I gave you, nindot dibaaaaaa</span></p>
+
+                <div class="pencil-body">
+                  <p>hope you love the  ice cread  and  the bracelet I gave you, nindot dibaaaaaa thank you for your time kanina, I enjoyed a lot! oh yes umm, I made this thing to actually take you on a date if you ever turn 18, but you and me have no relationship gud ana, just a date! </p>
+                  <p>Why am I like this? daghan man ug babae sa mundo ba? well, because diba niingon nako saimo na gusto tika,  kaya di ko pagsusukuan yung taong love ko, because one daycourt tika usab puhon-puhon, a deepest hope  and patience from my heart that you'll eventually learn on how to love me, because if that happens, I'll love you like a swan talaga.</p>
+                </div>
+
+                <div class="author-row">
+                  <div class="author">- Leem</div>
+                  <img class="signature" src="signature.png" alt="Signature photo" />
+                </div>
+
+                <div class="actions">
+                  <button class="btn primary" id="markReadBtn">
+                    <i class="fa-regular fa-circle-check"></i>
+                    Mark as read
+                  </button>
+                </div>
+              </div>
+
+              <!-- overlay used for erase animation -->
+              <div class="eraser-overlay" id="page1Eraser"></div>
+            </div>
+          </article>
+
+          <!-- Page 2 -->
+          <article class="page page-2" data-page="2">
+            <div class="paper">
+              <div class="paper-inner" id="page2Content">
+                <h2 class="pencil-title">ehem i mark as read sa ubos</h2>
+
+                <div class="choice-row">
+                  <button class="btn success" id="dateLeemBtn">
+                    <i class="fa-regular fa-heart"></i>
+                    Date Leem
+                  </button>
+
+                  <button class="btn danger" id="noDateLeemBtn">
+                    <i class="fa-regular fa-face-sad-tear"></i>
+                    No Date Leem
+                  </button>
+                </div>
+
+         
+                <div class="result-area" id="resultArea"></div>
+              </div>
+
+              <div class="eraser-overlay" id="page2Eraser"></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="scroll-advice">Scroll down to read raine hehe</div>
+      </div>
+    </section>
+
+   
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
